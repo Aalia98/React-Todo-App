@@ -1,28 +1,31 @@
-# React + Vite
+# React Redux Todo App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A todo list app built with React and Redux Toolkit. You can add, edit, complete and delete tasks, and your list is kept in the browser's local storage so it stays after a refresh.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Add a new task
+- Edit an existing task (the button changes to "Update Todo")
+- Click a task to mark it completed or not completed (completed tasks are crossed out)
+- Delete a task
+- Tasks are saved in `localStorage` and loaded again when the app starts
 
-## 1. Make sure you have NODE installed!
+## Tech
 
-Firstly, you will need to download the latest version of Node by <a href="https://nodejs.org/en/download/">CLICKING HERE</a>
+React 18, Redux Toolkit and React Redux for state (a single `todo` slice in `src/redux/features/todo/todoSlice.js`), Tailwind CSS for styling, Vite as the build tool.
 
-## 2. Clone the repo!
+## Run locally
 
-Next, you will need to run the following command in the Terminal to clone the repo onto your machine.
+Requires Node.js and npm.
 
-```git clone https://github.com/Aalia98/Assignment-React-Todo-App.git```
+```
+git clone https://github.com/Aalia98/React-Todo-App.git
+cd React-Todo-App
+npm install
+npm run dev
+```
 
-## 3. Install Dependancies
+## Known limitations
 
-Next, you need to install all the dependancies using:
-
-```npm install```
-
-Once this is done, you can start the app with:
-
-```npm run dev```
+- Empty tasks are not blocked
+- No tests
